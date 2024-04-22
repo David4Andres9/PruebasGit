@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.workshop.employees.Models.EmployeeModel;
 import com.workshop.employees.Services.EmployeeService;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @RestController
 @RequestMapping ("/api/v1/employees")
@@ -53,4 +55,9 @@ public class EmployeeController {
     public List<EmployeeModel> getEmployeesByExperience(@PathVariable int experience){
         return employeeService.getAllEmployeesByExperience(experience);
     }
+    @GetMapping("prueba")
+    public String prueba() {
+        return "Hola que hace";
+    }
+    
 }
